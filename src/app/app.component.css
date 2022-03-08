@@ -4,3 +4,16 @@ div{
 .bg-color-gris{
     background-color: rgb(0, 183, 255);
 }
+
+.nav-column{
+    transition: all 1s;
+
+}
+
+.narrow{
+    width: 10px;
+}
+
+.wider{
+    width: 30%;
+}
