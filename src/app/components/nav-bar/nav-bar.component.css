@@ -29,7 +29,7 @@ ul{
 
 .narrow{
   transition:0.3s;
-  opacity: 1;
+  opacity: 0;
 }
 .wider{
   transition: 0.3s;
@@ -38,4 +38,8 @@ ul{
 
 .sidebar-buttons{
   justify-content: center;
+}
+
+.navbar.wider{
+  
 }
