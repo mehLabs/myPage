@@ -12,16 +12,21 @@ app-nav-bar{
     overflow: auto; /*Pone una barrita lateral si me quedo sin espacio */
 }
 
-#navbar{
+.navbar{
+    display: flex;
+    position: relative;
     width: 150px;
     height: 100vh;
 }
+
+
 
 router-outlet{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1px 16px; /* vertical, horizontal*/
+    padding-right: 16px;
     height: 1000px;
 
 
@@ -32,17 +37,18 @@ app-social-media{
     position:sticky;
     float:right;
     width: 40px;
-    margin:0 0 5px;
+    margin:0;
+    margin-right: 5px;
     top:0;
     
     
 }
 
-.container{
+.main-container{
     display:flex;
     padding: 0;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     
 }
 .main{
@@ -50,9 +56,45 @@ app-social-media{
     padding: 0;
     margin: 0;
     justify-content: space-between;
-    width: calc(100% - 150px - 20px);
+    width: calc(100vw - 150px);
 }
 
 :root{
     --main-color: rgb(0, 65, 119);
+}
+
+@media screen and  (max-width:700px) {
+    .main-container{
+        flex-direction: column;
+    }
+    .main{
+        width: 100vw;
+    }
+    .navbar{
+        display: block;
+    }
+    app-nav-bar{
+        display: block;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-left:0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    app-nav-bar a{float: left;}
+    .navbar{
+        margin-left:0;
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    app-nav-bar a{
+        text-align: center;
+        float: none;
+    }
 }
