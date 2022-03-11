@@ -1,45 +1,16 @@
-.col-som{
-    margin:0;
+.sidebar-header{
+    display: flex;
+    justify-content: center;
 }
 
-a, a:hover, a:visited, a:active {
-  color: inherit;
-  text-decoration: none;
- }
-
-.bi{
-    font-size: 30px;
-
+.sidebar-inner a{
+    display: block;
+    color:black;
+    padding:16px;
+    text-decoration: none;
 }
 
-ul{
-  list-style-type: none;
-}
-
-.icon-frame{
-  display: flex;
-  background-color: blueviolet;
-  border-radius: 10px;
-  padding-right: 3px;
-}
-
-.butn{
-  cursor: pointer;
-}
-
-.narrow{
-  transition:0.3s;
-  opacity: 0;
-}
-.wider{
-  transition: 0.3s;
-  opacity: 1;
-}
-
-.sidebar-buttons{
-  justify-content: center;
-}
-
-.navbar.wider{
-  
+.sidebar-inner a.active{
+    background-color: var(--main-color);
+    color:white;
 }

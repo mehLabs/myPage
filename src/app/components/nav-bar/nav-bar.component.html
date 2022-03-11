@@ -1,31 +1,10 @@
-<nav class ="navbar navbar-light "
-     [ngClass]="status ? 'widerBar' : 'narrowBar'">
-                <ul class="sidebar-buttons">
-                    <li>
-                        <button 
-                        class="navbar-toggler" 
-                        type="button" 
-                        aria-label="Toggle navigation"
-                        (click)="onClick()"
-                        >
-                            <span class="navbar-toggler-icon "></span>
-                            
-                        </button>
-                    </li>
-                    <li class="butn">
-                        <div 
-                            class="icon-frame"
-                        >
-                            
-                            <a  routerLink="home" routerLinkActive="enable">
-                                <i class="bi bi-house-fill"></i>
-                                <h4 [ngClass]="status ? 'wider' : 'narrow'" >Home</h4>
-                            </a>
-                        
-                        </div>
 
-                    </li>
-                    
-                </ul>
-    
-</nav>
+        <div class="sidebar-header">
+            <h3>Hugo Iturrieta</h3>
+        </div>
+        <div class="sidebar-inner">
+            <a class="link" routerLink="/home" routerLinkActive="active">Home</a>
+            <a class="link" routerLink="/profile" routerLinkActive="active">Profile</a>
+            <a class="link" routerLink="/aptitudes" routerLinkActive="active">Aptitudes</a>
+            <a class="link" routerLink="/employment-history" routerLinkActive="active">Employment History</a>
+        </div>

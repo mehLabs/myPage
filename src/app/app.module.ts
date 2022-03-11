@@ -9,6 +9,7 @@ import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
 import { EmploymentHistoryComponent } from './components/employment-history/employment-history.component';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { HomeComponent } from './components/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,11 +19,13 @@ import { HomeComponent } from './components/home/home.component';
     AptitudesComponent,
     EmploymentHistoryComponent,
     SocialMediaComponent,
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
