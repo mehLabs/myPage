@@ -1,7 +1,7 @@
 .sm-column{
     position: sticky;
     top:15px;
-    height: 99vh;
+    height: calc(100vh - 25px);
 }
 .links-container{
     margin-top:10px;
@@ -12,7 +12,25 @@
 .links-container:hover{
     transition: 0.2s;
     box-shadow: 0 0 15px 10px rgb(148, 228, 0);
-    border-radius: 10px;
+    border-radius: 10px;   
+}
+
+.links-container a{
+    text-decoration: none;
+    color: black;
+}
+
+a span.text{
+    transition: 0.5s;
+    opacity: 0;
+    position: absolute;
+    left: calc(-50% - 70px);
+    right: auto;
+    transform: translateY(10px);
+    bottom: auto;
+}
+.links-container a:hover span.text{
+    opacity: 1;
 }
 
 .sm-column a{
@@ -28,7 +46,7 @@ a i{
 }
 
 .click-sign{
-    transition: all 1s;
+    transition: all 1s, opacity 0.3s;
     width: 100px;
     position: fixed;
     top:75px;
@@ -56,7 +74,8 @@ a i{
 
 .click-sign.active{
     transition: all 0.3s;
-    transform: translate(-75px,0);
+    transform: translate(-145px,0);
     opacity: 1;
     visibility: visible;
 }
+

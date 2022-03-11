@@ -14,7 +14,7 @@ export class SocialMediaComponent implements OnInit {
     let sign:Element | null = document.querySelector(".click-sign");
     let columnaBotones:any = document.querySelector(".links-container");
 
-    columnaBotones.addEventListener("mouseenter", () =>{
+    columnaBotones.addEventListener("mouseover", () =>{
       if (sign != null)
       sign.classList.add("active");
     });
