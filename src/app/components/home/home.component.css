@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mail{
+    background-color: rgb(0, 131, 22);
+    padding: 10px;
+    border-radius: 5px;
+}
+.mail:hover{
+    transition: 3s;
+    box-shadow: 0 0px 150px 40px rgb(148, 228, 0);
+}
+
+.mail a{
+    color:white;
+    text-decoration: none;
+}

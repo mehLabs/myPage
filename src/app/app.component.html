@@ -1,7 +1,9 @@
-<div class="container-flex">
-  <div class="row">
-    <div class="col-1"> <app-social-media></app-social-media> </div>
-    <div class="col"> <router-outlet></router-outlet> </div>
-    <div class="col-sm-1 bg-color-gris"><app-nav-bar></app-nav-bar></div>
-  </div>
+<div class="container">
+    <nav id="navbar">
+        <app-nav-bar></app-nav-bar>
+    </nav>
+    <div class="main">
+        <router-outlet></router-outlet>
+        <app-social-media></app-social-media>
+    </div>
 </div>
