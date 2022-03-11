@@ -1,6 +1,7 @@
 .sidebar-header{
     display: flex;
     justify-content: center;
+    align-content: center;
 }
 
 .sidebar-inner a{
@@ -8,6 +9,9 @@
     color:black;
     padding:16px;
     text-decoration: none;
+}
+.sidebar-inner a:hover{
+    background-color: whitesmoke;
 }
 
 .sidebar-inner a.active{

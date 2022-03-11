@@ -1,6 +1,11 @@
 <div class="container">
+  <div 
+    class="hugo-sign"
+    [ngClass]="{'active' : hugoSignActive == true}">
+      <img id="hugo-pic" src="../../../assets/images/hugo.webp" alt="Hugo Iturrieta sonriendo el día de su casamiento">
+  </div>
   <h1>
-    Hello. My name is Hugo.
+    Hello. My name is <u id="hugo">Hugo</u>.
   </h1> 
   <h3>
     This is my official website.
@@ -10,3 +15,4 @@
     <a href="mailto:hugo.sud.ste@gmail.com">Mail me</a>
   </div>
 </div>
+

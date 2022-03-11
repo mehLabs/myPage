@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  hugoSignActive:boolean=false;
 
   constructor() { }
 
   ngOnInit(): void {
+    let hugo:any = document.querySelector("#hugo");
+    let hugoSign:any=document.querySelector(".hugo-sign");
+
+    hugo.addEventListener("click", () => {
+      this.hugoSignActive = !this.hugoSignActive;
+    })
   }
 
 }

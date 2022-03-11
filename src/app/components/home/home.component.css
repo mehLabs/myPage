@@ -1,10 +1,66 @@
+:root{
+    --sign-color:black;
+}
+
 .container{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top:35vh;
+}
+
+#hugo{
+    cursor: pointer;
+
+}
+#hugo:hover{
+    transition: 0.2s;
+    color:yellowgreen;
+}
+
+
+
+.hugo-sign{
+    transition: 1.2s;
+    display: flex;
+    border: 1px solid yellowgreen;
+    bottom: auto;
+    top:50px;
+    left: 125px;
+    right: auto;
+    position:relative;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px black;
+    opacity: 0;
+    pointer-events: none;
+}
+.hugo-sign::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left:44%;
+    right: auto;
+    top:auto;
+    bottom: -10%;
+    border:1vw solid black;
+    border-color: black transparent transparent transparent;
+    
+}
+.hugo-sign.active{
+    transition: 1.2s;
+    transform: translateY(-50px);
+    opacity: 1;
+}
+#hugo-pic{
+    width: 10vw;
+    height: auto;
 }
 
 .mail{
+    transition: 3s;
     background-color: rgb(0, 131, 22);
     padding: 10px;
     border-radius: 5px;

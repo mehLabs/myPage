@@ -1,8 +1,18 @@
 .sm-column{
+    position: sticky;
+    top:15px;
+    height: 99vh;
+}
+.links-container{
+    margin-top:10px;
     display:flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+}
+.links-container:hover{
+    transition: 0.2s;
+    box-shadow: 0 0 15px 10px rgb(148, 228, 0);
+    border-radius: 10px;
 }
 
 .sm-column a{
@@ -19,22 +29,28 @@ a i{
 
 .click-sign{
     transition: all 1s;
-    position: absolute;
+    width: 100px;
+    position: fixed;
     top:75px;
     padding: 10px;
     border-radius: 20px;
     background-color: rgb(0, 174, 255);
     right: 10px;
     opacity: 0;
+    border: 1px solid rgb(0, 105, 153);
+    cursor: pointer;
+    visibility: hidden;
+    pointer-events: none;
 }
 .click-sign::before{
     content:'';
-    position: absolute;
+    position: fixed;
     width: 0;
     height: 0;
-    left: 140px;
+    left: 102px;
+    top: -1px;
     right: auto;
-    border:15px solid;
+    border:15px solid rgb(0, 105, 153);
     border-color: rgb(0, 174, 255) transparent transparent;
 }
 
@@ -42,4 +58,5 @@ a i{
     transition: all 0.3s;
     transform: translate(-75px,0);
     opacity: 1;
+    visibility: visible;
 }
