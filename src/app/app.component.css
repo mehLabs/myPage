@@ -49,7 +49,7 @@ app-social-media{
     padding: 0;
     margin: 0;
     width: 100vw;
-    
+
 }
 .main{
     display:flex;
@@ -92,7 +92,7 @@ app-social-media{
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
     app-nav-bar a{
         text-align: center;
         float: none;
