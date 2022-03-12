@@ -1,3 +1,10 @@
+.main-container{
+    display:flex;
+    padding: 0;
+    margin: 0;
+
+}
+
 app-nav-bar{
     margin:0;
     padding:0;
@@ -44,13 +51,7 @@ app-social-media{
     
 }
 
-.main-container{
-    display:flex;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
 
-}
 .main{
     display:flex;
     padding: 0;
@@ -92,7 +93,7 @@ app-social-media{
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     app-nav-bar a{
         text-align: center;
         float: none;
