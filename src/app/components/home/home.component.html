@@ -1,11 +1,14 @@
 <div class="container">
-  <div 
-    class="hugo-sign"
-    [ngClass]="{'active' : hugoSignActive == true}">
-      <img id="hugo-pic" src="../../../assets/images/hugo.webp" alt="Hugo Iturrieta sonriendo el día de su casamiento">
-  </div>
+  
   <h1>
-    Hello. My name is <u id="hugo">Hugo</u>.
+    Hello. My name is 
+    <u id="hugo">
+      <div 
+        class="hugo-sign"
+        [ngClass]="{'active' : hugoSignActive == true}">
+          <img id="hugo-pic" src="../../../assets/images/hugo.webp" alt="Hugo Iturrieta sonriendo el día de su casamiento">
+      </div>
+      Hugo</u> _
   </h1> 
   <h3>
     This is my official website.
