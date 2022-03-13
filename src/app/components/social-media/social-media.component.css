@@ -2,8 +2,11 @@
     position: sticky;
     top:15px;
     height: calc(100vh - 25px);
+    border-radius: 30px;
+    background-color: white;
 }
 .links-container{
+    
     margin-top:10px;
     display:flex;
     flex-direction: column;
@@ -17,6 +20,7 @@
 .links-container a{
     text-decoration: none;
     color: black;
+    
 }
 
 a span.text{
@@ -27,6 +31,10 @@ a span.text{
     right: auto;
     transform: translateY(10px);
     bottom: auto;
+    pointer-events: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 .links-container a:hover span.text{
     opacity: 1;
@@ -58,16 +66,18 @@ a i{
     cursor: pointer;
     visibility: hidden;
     pointer-events: none;
+    box-shadow: 0 0 2px black;
 }
-.click-sign::after{
-    position: absolute;
+.click-sign::before{
     content:'';
     width: 0;
     height: 0;
     left: 100px;
     top: -1px;
     border:15px solid rgb(0, 105, 153);
-    border-color: rgb(0, 174, 255) transparent transparent;
+    border-color: rgb(0, 174, 255) transparent transparent; 
+    z-index: -1;
+    position: absolute;
 }
 
 .links-container a:hover .click-sign{
@@ -79,10 +89,19 @@ a i{
 .links-container a:hover i{
     transition: 0.5s;
     font-size: 3em;
+    background-color: white;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:700px){
     .sm-column{
         top:25vh;
     }
+    .links-container a:hover .click-sign{
+        transition: all 0.3s;
+        transform: translate(-145px,0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
 }

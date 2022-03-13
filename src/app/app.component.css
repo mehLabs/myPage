@@ -1,10 +1,17 @@
+.main-container{
+    display:flex;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
 app-nav-bar{
     margin:0;
     padding:0;
     min-width: 150px;
     width: 150px;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: white;
     border-right:1px solid #c0bebe;
     border-top: 1px solid #c0bebe;;
     border-radius: 0px 20px 0px 0px;
@@ -25,12 +32,8 @@ router-outlet{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1px 16px; /* vertical, horizontal*/
-    padding-right: 16px;
+    padding: 1px 16px 1px 0px; /* vertical, horizontal*/
     height: 1000px;
-
-
-
 }
 
 app-social-media{
@@ -41,26 +44,23 @@ app-social-media{
     margin-right: 5px;
     top:0;
     
+    background-color: white;
     
 }
 
-.main-container{
-    display:flex;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
 
-}
 .main{
     display:flex;
     padding: 0;
     margin: 0;
     justify-content: space-between;
     width: calc(100vw - 150px);
+    background-color: var(--background-color);
 }
 
 :root{
     --main-color: rgb(0, 65, 119);
+    --background-color: #383434;
 }
 
 @media screen and  (max-width:700px) {
@@ -92,7 +92,7 @@ app-social-media{
 
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
     app-nav-bar a{
         text-align: center;
         float: none;

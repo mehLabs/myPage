@@ -1,5 +1,7 @@
 :root{
     --sign-color:black;
+    --hugo-x:0px;
+    --hugo-y:0px;
 }
 
 .container{
@@ -10,8 +12,15 @@
     height: 1000px;
 }
 
+.main-title{
+    display: flex;
+    flex-direction: row;
+}
+
 #hugo{
     cursor: pointer;
+    display: flex;
+    flex-direction: row;
 
 }
 #hugo:hover{
@@ -19,14 +28,22 @@
     color:yellowgreen;
 }
 
-
+#hugo-text{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 
 .hugo-sign{
     transition: 1.2s;
+    transform: translate(-18px , calc(-20vh - 20px));
     display: flex;
     border: 1px solid yellowgreen;
     position:absolute;
-    transform: translateY(-25px);
     background-color: black;
     padding: 20px;
     border-radius: 10px;
@@ -50,7 +67,7 @@
 }
 .hugo-sign.active{
     transition: 1.2s;
-    transform: translateY(-100px);
+    transform: translate(-18px,calc(-20vh - calc(20px * 3)));
     opacity: 1;
     visibility: visible;
 }
@@ -75,12 +92,17 @@
     text-decoration: none;
 }
 
+.text-with.flex{
+    display: flex;
+    flex-direction: row;
+}
+
 @media screen and (max-width:700px) {
     .hugo-sign{
-        transform: translateY(-30vh);
+        transform: translate(30vh,-40vh);
     }
     .hugo-sign.active{
-        transform: translateY(-40vh);
+        transform: translate(30vh,-45vh);
     }
     .hugo-sign::before{
         border: 3vw solid black;
