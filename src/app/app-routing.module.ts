@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'profile',component:ProfileComponent},
   {path:'social-media',component:SocialMediaComponent},
-  {path:'',component:HomeComponent}
+  {path:'',redirectTo:'home',pathMatch:'full'}
 ];
 
 @NgModule({
