@@ -2,6 +2,8 @@
     position: sticky;
     top:15px;
     height: calc(100vh - 25px);
+    border-radius: 30px;
+    background-color: white;
 }
 .links-container{
     
@@ -30,6 +32,9 @@ a span.text{
     transform: translateY(10px);
     bottom: auto;
     pointer-events: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 .links-container a:hover span.text{
     opacity: 1;
@@ -84,6 +89,8 @@ a i{
 .links-container a:hover i{
     transition: 0.5s;
     font-size: 3em;
+    background-color: white;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:700px){
@@ -96,4 +103,5 @@ a i{
         opacity: 1;
         visibility: visible;
     }
+    
 }
