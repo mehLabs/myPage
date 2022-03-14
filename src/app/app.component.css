@@ -65,7 +65,7 @@ app-social-media{
     display:flex;
     justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 0 0 15px 0;
     width: calc(100vw - 150px);
     background-color: var(--background-color);
 }
@@ -100,7 +100,7 @@ app-social-media{
     }
     router-outlet{
         padding: 0;
-        height: 100vh;
+        margin: 15px 0;
     }
     app-social-media{
         position: relative;
