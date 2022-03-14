@@ -1,3 +1,15 @@
+:root{
+    --main-color: #045fa3;
+    --background-color: #012128;
+    --blue-color: #06aaf2;
+    --orange-color: #feba3d;
+    --green-color: #9f865f;
+    --light-blue-color: #a7edfc;
+    --bordeau-color: #321F2D;
+    --light-pink-color: #DDD7D7;
+    --skin-color: #E1B19B;
+    --brown-color: #593E33;
+}
 .main-container{
     display:flex;
     padding: 0;
@@ -30,40 +42,36 @@ app-nav-bar{
 
 router-outlet{
     display: flex;
+    max-width: calc(100vw - 500px);
     justify-content: center;
     align-items: center;
     padding: 1px 16px 1px 0px; /* vertical, horizontal*/
-    height: 1000px;
+    /*height: 1000px;*/
 }
 
 app-social-media{
-    position:sticky;
+    position:fixed;
     float:right;
     width: 40px;
     margin:0;
-    margin-right: 5px;
+    right: 0px;
     top:0;
     
-    background-color: white;
     
 }
 
 
 .main{
     display:flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
     width: calc(100vw - 150px);
     background-color: var(--background-color);
 }
 
-:root{
-    --main-color: rgb(0, 65, 119);
-    --background-color: #383434;
-}
 
-@media screen and  (max-width:700px) {
+@media screen and  (max-width:1185px) {
     .main-container{
         flex-direction: column;
     }
@@ -88,6 +96,9 @@ app-social-media{
         width: 100%;
         height: auto;
         position: relative;
+    }
+    router-outlet{
+        padding: 0;
     }
 
 }
