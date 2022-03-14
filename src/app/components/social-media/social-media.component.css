@@ -1,20 +1,23 @@
 .sm-column{
+    display: flex;
+    align-items: center;
     position: sticky;
     top:15px;
-    height: calc(100vh - 25px);
-    border-radius: 30px;
-    background-color: white;
+    height: 100vh;
 }
 .links-container{
-    
+    transition: 0.25s;
     margin-top:10px;
     display:flex;
     flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
     align-items: center;
 }
 .links-container:hover{
     transition: 0.2s;
     border-radius: 10px;   
+    transform: translateX(-15px);
 }
 
 .links-container a{
@@ -77,7 +80,7 @@ a i{
     left: 100px;
     top: -1px;
     border:15px solid rgb(0, 105, 153);
-    border-color: rgb(0, 174, 255) transparent transparent; 
+    border-color: rgb(0, 174, 255)  transparent  transparent; 
     z-index: -1;
     position: absolute;
 }
@@ -95,9 +98,20 @@ a i{
     border-radius: 50%;
 }
 
-@media screen and (max-width:700px){
+
+@media screen and (max-width:1185px){
     .sm-column{
-        top:25vh;
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+    .links-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .links-container:hover{
+        transform: translateX(0);
     }
     .links-container a:hover .click-sign{
         transition: all 0.3s;
@@ -105,5 +119,4 @@ a i{
         opacity: 1;
         visibility: visible;
     }
-    
 }

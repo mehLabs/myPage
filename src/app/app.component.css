@@ -77,6 +77,7 @@ app-social-media{
     }
     .main{
         width: 100vw;
+        flex-direction: column;
     }
     .navbar{
         display: block;
@@ -100,6 +101,10 @@ app-social-media{
     router-outlet{
         padding: 0;
         height: 100vh;
+    }
+    app-social-media{
+        position: relative;
+        width: 100vw;
     }
 
 }
