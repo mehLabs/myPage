@@ -35,6 +35,8 @@ a span.text{
     background-color: white;
     padding: 5px;
     border-radius: 5px;
+    width: 75px;
+    text-align: center;
 }
 .links-container a:hover span.text{
     opacity: 1;

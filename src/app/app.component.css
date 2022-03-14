@@ -99,11 +99,12 @@ app-social-media{
     }
     router-outlet{
         padding: 0;
+        height: 100vh;
     }
 
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 500px) {
     app-nav-bar a{
         text-align: center;
         float: none;

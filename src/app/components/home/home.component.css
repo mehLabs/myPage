@@ -5,11 +5,18 @@
 }
 
 .container{
+    transition: 1s;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     padding-top: 30vh;
-    height: 1000px;
+}
+.welcome-sign{
+    transition: 1s;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 95vw;
+    background-color: white;
 }
 
 .main-title{
@@ -21,7 +28,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-
+    align-items: center;
 }
 #hugo:hover{
     transition: 0.2s;
@@ -31,16 +38,15 @@
 #hugo-text{
     display: block;
     font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
     font-weight: bold;
 }
 
 .hugo-sign{
     transition: 1.2s;
-    transform: translate(-18px , calc(-20vh - 20px));
+    transition: opacity 0.1s;
+    transform: translate(-18px , 0);
+    height: 180px;
+    width: 130px;
     display: flex;
     border: 1px solid yellowgreen;
     position:absolute;
@@ -49,7 +55,6 @@
     border-radius: 10px;
     box-shadow: 0 0 8px black;
     opacity: 0;
-    pointer-events: none;
     visibility: hidden;
 }
 .hugo-sign::before{
@@ -57,24 +62,26 @@
     position: absolute;
     width: 0;
     height: 0;
-    left:44%;
-    right: auto;
+    left:auto;
+    right: 170px;
     top:auto;
-    bottom: -10%;
-    border:1vw solid black;
-    border-color: black transparent transparent transparent;
+    bottom: 50%;
+    border:10px solid black;
+    border-color: transparent white transparent transparent;
     
 }
 .hugo-sign.active{
+    position: relative;
     transition: 1.2s;
-    transform: translate(-18px,calc(-20vh - calc(20px * 3)));
+    transform: translate(18px,0px);
     opacity: 1;
     visibility: visible;
 }
 #hugo-pic{
-    width: 10vw;
-    height: auto;
+    width: 130px;
+    height: 180px;
 }
+
 
 .mail{
     transition: 3s;
@@ -83,11 +90,12 @@
     border-radius: 5px;
 }
 .mail:hover{
-    transition: 3s;
+    transition: 1.5s;
     box-shadow: 0 0px 150px 40px rgb(148, 228, 0);
 }
 
-.mail a{
+a{
+    text-align: center;
     color:white;
     text-decoration: none;
 }
@@ -97,19 +105,6 @@
     flex-direction: row;
 }
 
-@media screen and (max-width:700px) {
-    .hugo-sign{
-        transform: translate(30vh,-40vh);
-    }
-    .hugo-sign.active{
-        transform: translate(30vh,-45vh);
-    }
-    .hugo-sign::before{
-        border: 3vw solid black;
-        border-color: black transparent transparent transparent;
-    }
-    .hugo-sign #hugo-pic{
-        width: 30vw;
-        height: auto;
-    }
+@media screen and (max-width:1185px) {
+ 
 }
