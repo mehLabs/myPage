@@ -89,10 +89,7 @@ h3{
     text-align: center;
 }
 
-.border{
-    border: 1px solid var(--bordeau-color);
-    box-shadow: 0 0 5px var(--bordeau-color);
-}
+
 
 @media screen and (max-width:1145px) {
     .profile{

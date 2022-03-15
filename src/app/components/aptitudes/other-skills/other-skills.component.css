@@ -1,0 +1,15 @@
+span.text{
+    font-weight: bold;
+    position: absolute;
+    transform: translateX(-120px);
+}
+.container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.bar .sq{
+    opacity: 1;
+}
