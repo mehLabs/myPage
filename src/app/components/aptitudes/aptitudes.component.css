@@ -1,0 +1,177 @@
+.container{
+    min-height: 100vh;
+    max-width: 100vw;
+}
+
+.cover{
+    background-color: var(--bordeau-color);
+    height: 182px;
+    width: 1045px;
+    max-width: 100vw;
+}
+
+.title-name h1{
+    position: absolute;
+    padding-left: 350px;
+    transform: translateY(-65px);
+    color: var(--light-pink-color);
+}
+
+.aptitudes-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1045px;
+    max-width: 100vw;
+    min-height: 600px;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--light-pink-color);
+}
+
+#hover{
+    position: absolute;
+    transform: translateX(-60px);
+}
+
+.reference-bar{
+    margin-top: 50px;
+}
+
+.references{
+    display: flex;
+}
+
+.reference{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100vw;
+    
+    user-select: none;
+}
+
+
+
+:host ::ng-deep .bar{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid black;
+    flex-direction: row;
+    max-width: 80vw;
+}
+
+:host ::ng-deep .bar0{
+    background-color: white;
+}
+
+:host ::ng-deep .sq{
+    transition:all 0.3s ;
+    display: flex;
+    padding-left: 5px;
+    align-items: center;
+    justify-content: left;
+    height: 50px;
+    width: 50px;
+    max-width: calc(80vw - 5px);
+    border-radius: 0 2px 2px 0;
+    box-shadow: inset 2px 0px 3px rgb(116, 116, 116);
+
+}
+.bar .min{
+    background-color: aqua;
+}
+
+:host ::ng-deep .bar .len0{
+    position: absolute;
+
+}
+:host ::ng-deep .bar .len1{
+    width: 50px;
+    opacity: 0;
+    background-color: red;
+    position: absolute;
+}
+:host ::ng-deep .bar .len2{
+    width: 100px;
+    opacity: 0;
+    background-color: red;
+    position: absolute;
+}
+:host ::ng-deep .bar .len3{
+    width: 150px;
+    background-color: orange;
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len4{
+    width: 200px;
+    background-color: orange;
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len5{
+    width: 250px;
+    background-color: yellow;
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len6{
+    width: 300px;
+    background-color: yellow;
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len7{
+    width: 350px;
+    background-color: rgb(77, 214, 58);
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len8{
+    width: 400px;
+    background-color: rgb(77, 214, 58);
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len9{
+    width: 450px;
+    background-color: green;
+    opacity: 0;
+    position: absolute;
+}
+:host ::ng-deep .bar .len10{
+    width: 495px;
+    background-color: green;
+    opacity: 0;
+    position: absolute;
+}
+
+.bar .sq:hover{
+    transition: 0s;
+    opacity: 1;
+}
+
+article.skills{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    min-height: 100px;
+    user-select: none;
+}
+
+@media screen and (max-width:1185px) {
+    .title-name h1{
+        padding: 0;
+    }
+    .cover{
+        height: 100px;
+    }
+    .title-name{
+        display: flex;
+        justify-content: center;
+    }
+    
+}

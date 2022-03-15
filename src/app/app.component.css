@@ -1,10 +1,30 @@
+:root{
+    --main-color: #045fa3;
+    --background-color: #012128;
+    --blue-color: #06aaf2;
+    --orange-color: #feba3d;
+    --green-color: #9f865f;
+    --light-blue-color: #a7edfc;
+    --bordeau-color: #321F2D;
+    --light-pink-color: #DDD7D7;
+    --light-pink-bg: #e7e7e7;
+    --skin-color: #E1B19B;
+    --brown-color: #593E33;
+}
+.main-container{
+    display:flex;
+    padding: 0;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
 app-nav-bar{
     margin:0;
     padding:0;
     min-width: 150px;
     width: 150px;
     height: 100vh;
-    background-color: #f1f1f1;
+    background-color: white;
     border-right:1px solid #c0bebe;
     border-top: 1px solid #c0bebe;;
     border-radius: 0px 20px 0px 0px;
@@ -23,52 +43,42 @@ app-nav-bar{
 
 router-outlet{
     display: flex;
+    max-width: calc(100vw - 500px);
     justify-content: center;
     align-items: center;
-    padding: 1px 16px; /* vertical, horizontal*/
-    padding-right: 16px;
-    height: 1000px;
-
-
-
+    padding: 1px 16px 1px 0px; /* vertical, horizontal*/
+    /*height: 1000px;*/
 }
 
 app-social-media{
-    position:sticky;
+    position:fixed;
     float:right;
     width: 40px;
     margin:0;
-    margin-right: 5px;
+    right: 0px;
     top:0;
     
     
 }
 
-.main-container{
-    display:flex;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    
-}
+
 .main{
     display:flex;
+    justify-content: center;
     padding: 0;
-    margin: 0;
-    justify-content: space-between;
+    margin: 0 0 15px 0;
     width: calc(100vw - 150px);
+    background-color: var(--background-color);
 }
 
-:root{
-    --main-color: rgb(0, 65, 119);
-}
 
-@media screen and  (max-width:700px) {
+@media screen and  (max-width:1185px) {
     .main-container{
         flex-direction: column;
     }
     .main{
         width: 100vw;
+        flex-direction: column;
     }
     .navbar{
         display: block;
@@ -89,10 +99,18 @@ app-social-media{
         height: auto;
         position: relative;
     }
+    router-outlet{
+        padding: 0;
+        margin: 15px 0;
+    }
+    app-social-media{
+        position: relative;
+        width: 100vw;
+    }
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     app-nav-bar a{
         text-align: center;
         float: none;

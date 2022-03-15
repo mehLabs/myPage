@@ -1,23 +1,29 @@
 .sm-column{
+    display: flex;
+    align-items: center;
     position: sticky;
     top:15px;
-    height: calc(100vh - 25px);
+    height: 100vh;
 }
 .links-container{
+    transition: 0.25s;
     margin-top:10px;
     display:flex;
     flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
     align-items: center;
 }
 .links-container:hover{
     transition: 0.2s;
-    box-shadow: 0 0 15px 10px rgb(148, 228, 0);
     border-radius: 10px;   
+    transform: translateX(-15px);
 }
 
 .links-container a{
     text-decoration: none;
     color: black;
+    
 }
 
 a span.text{
@@ -28,6 +34,12 @@ a span.text{
     right: auto;
     transform: translateY(10px);
     bottom: auto;
+    pointer-events: none;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 75px;
+    text-align: center;
 }
 .links-container a:hover span.text{
     opacity: 1;
@@ -40,6 +52,7 @@ a span.text{
 }
 
 a i{
+    transition: 0.3s;
     font-size: 2em;
     text-decoration: none;
     color:var(--main-color);
@@ -48,39 +61,62 @@ a i{
 .click-sign{
     transition: all 1s, opacity 0.3s;
     width: 100px;
-    position: fixed;
-    top:75px;
+    transform: translateX(calc(-50px - 2em));
+    position: absolute;
     padding: 10px;
     border-radius: 20px;
     background-color: rgb(0, 174, 255);
-    right: 10px;
     opacity: 0;
     border: 1px solid rgb(0, 105, 153);
     cursor: pointer;
     visibility: hidden;
     pointer-events: none;
+    box-shadow: 0 0 2px black;
 }
 .click-sign::before{
     content:'';
-    position: fixed;
     width: 0;
     height: 0;
-    left: 102px;
+    left: 100px;
     top: -1px;
-    right: auto;
     border:15px solid rgb(0, 105, 153);
-    border-color: rgb(0, 174, 255) transparent transparent;
+    border-color: rgb(0, 174, 255)  transparent  transparent; 
+    z-index: -1;
+    position: absolute;
 }
 
-.click-sign.active{
+.links-container a:hover .click-sign{
     transition: all 0.3s;
     transform: translate(-145px,0);
     opacity: 1;
     visibility: visible;
 }
+.links-container a:hover i{
+    transition: 0.5s;
+    font-size: 3em;
+    background-color: white;
+    border-radius: 50%;
+}
 
-@media screen and (max-width:700px){
+
+@media screen and (max-width:1185px){
     .sm-column{
-        top:25vh;
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: auto;
+    }
+    .links-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .links-container:hover{
+        transform: translateX(0);
+    }
+    .links-container a:hover .click-sign{
+        transition: all 0.3s;
+        transform: translate(-145px,0);
+        opacity: 1;
+        visibility: visible;
     }
 }

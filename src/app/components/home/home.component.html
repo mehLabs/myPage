@@ -1,21 +1,27 @@
 <div class="container">
-  
-  <h1>
-    Hello. My name is 
-    <u id="hugo">
-      <div 
-        class="hugo-sign"
-        [ngClass]="{'active' : hugoSignActive == true}">
-          <img id="hugo-pic" src="../../../assets/images/hugo.webp" alt="Hugo Iturrieta sonriendo el día de su casamiento">
+  <section class="welcome-sign">
+    <div class="main-title">
+      <h1 class="text-with-flex">
+        Hello. My name is </h1>
+      <u id="hugo">
+        <span id="hugo-text">_Hugo_</span>
+      </u>
+    </div>
+    <h3>
+      This is my official website.
+    </h3>
+    <br>
+    <a href="mailto:hugo.sud.ste@gmail.com">
+      <div class="mail">
+        Mail me
       </div>
-      Hugo</u> _
-  </h1> 
-  <h3>
-    This is my official website.
-  </h3>
-  <br>
-  <div class="mail">
-    <a href="mailto:hugo.sud.ste@gmail.com">Mail me</a>
+    </a>
+  </section>
+  <div 
+    class="hugo-sign"
+    [ngClass]="{'active' : hugoSignActive == true}">
+    <a class="link" routerLink="/profile">
+      <img id="hugo-pic" src="../../../assets/images/hugo.webp" alt="Hugo Iturrieta sonriendo el día de su casamiento">
+    </a>
   </div>
 </div>
-

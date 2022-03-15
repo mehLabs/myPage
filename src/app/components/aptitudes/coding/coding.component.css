@@ -1,0 +1,30 @@
+span.text{
+    font-weight: bold;
+    position: relative;
+    margin-right: 30px;
+}
+.container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    gap:10px;
+}
+
+.front-end{
+    padding:0 25px 25px 25px;
+}
+.back-end{
+    padding:0 25px 25px 25px;
+}
+
+.bar .sq{
+    opacity: 1;
+}
+
+@media screen and (max-width: 1145px) {
+    span.text{
+        transform: translateX(0);
+    }
+    .bar{height: 30px;}
+    .sq{height: 30px;}
+}

@@ -1,0 +1,126 @@
+.sidebar-inner a.active{
+    background-color: var(--bordeau-color);
+}
+
+
+.profile{
+    background-color: var(--light-pink-color);
+    border-radius: 10px;
+    min-height: 100vh;
+    width: 1045px;
+}
+
+
+#cover-img{
+    border-radius: 5px;
+    height: 182px;
+    width: 1045px;
+    opacity: 0;
+}
+.cover{
+    display: flex;
+    padding: 0;
+    background-color: var(--bordeau-color);
+}
+
+.profile-pic{
+    position: absolute;
+    transform: translate(100px,-115px); /*center is 465px*/
+}
+#profile-picture{
+    height: 230px;
+}
+
+.profile-body{
+    display: flex;
+    flex-direction: row;
+    padding: 0px 25px;
+}
+
+.brief-description{
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    width: 395px;
+    height: 250px;
+}
+.brief-description h2{
+    font-weight: normal;
+}
+.brief-description p{
+    margin-block-start: 0;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+}
+
+.right-description{
+    margin-left: 30px;
+    width: 595px;
+}
+
+.title-name{
+    position: absolute;
+    padding-left: 350px;
+    transform: translateY(-65px);
+
+}
+.title-name h1{
+    color: var(--light-pink-color);
+}
+
+.interests{
+    display: flex;
+    margin-top:14px;
+    border-radius: 5px;
+    flex-direction: column;
+    height: 250px;
+}
+.personality{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+}
+
+
+h3{
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:1145px) {
+    .profile{
+        width: calc(100vw);
+    }
+    .profile-body{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    .brief-description{
+        max-width: 90vw;
+    }
+    .right-description{
+        width: 80vw;
+        margin-left: 0px;
+    }
+    .profile-header{
+        max-width: calc(100vw - 16px);
+    }
+    #cover-img{
+        width: calc(100vw - 25px);
+    }
+    .cover{
+        width: calc(100vw - 16px);
+    }
+    .title-name{
+        width: calc(100vw - 16px);
+        margin: 0 auto;
+        position: absolute;
+        padding-left: 0;
+        text-align: center;
+        transform: translateY(-195px);
+    }
+}
