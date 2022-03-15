@@ -1,11 +1,13 @@
 .container{
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 .cover{
     background-color: var(--bordeau-color);
     height: 182px;
     width: 1045px;
+    max-width: 100vw;
 }
 
 .title-name h1{
@@ -20,6 +22,7 @@
     flex-direction: column;
     align-items: center;
     width: 1045px;
+    max-width: 100vw;
     min-height: 600px;
     border-radius: 0 0 10px 10px;
     background-color: var(--light-pink-color);
@@ -42,6 +45,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 100vw;
+    
+    user-select: none;
 }
 
 
@@ -53,6 +59,7 @@
     border-radius: 5px;
     border: 2px solid black;
     flex-direction: row;
+    max-width: 80vw;
 }
 
 :host ::ng-deep .bar0{
@@ -67,7 +74,10 @@
     justify-content: left;
     height: 50px;
     width: 50px;
+    max-width: calc(80vw - 5px);
     border-radius: 0 2px 2px 0;
+    box-shadow: inset 2px 0px 3px rgb(116, 116, 116);
+
 }
 .bar .min{
     background-color: aqua;
@@ -149,8 +159,19 @@ article.skills{
     flex-direction: column;
     min-width: 300px;
     min-height: 100px;
+    user-select: none;
 }
 
-@media screen and (max-width:1145px) {
+@media screen and (max-width:1185px) {
+    .title-name h1{
+        padding: 0;
+    }
+    .cover{
+        height: 100px;
+    }
+    .title-name{
+        display: flex;
+        justify-content: center;
+    }
     
 }
