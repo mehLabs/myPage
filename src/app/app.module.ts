@@ -10,6 +10,9 @@ import { EmploymentHistoryComponent } from './components/employment-history/empl
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CodingComponent } from './components/aptitudes/coding/coding.component';
+import { SocialComponent } from './components/aptitudes/social/social.component';
+import { OtherSkillsComponent } from './components/aptitudes/other-skills/other-skills.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     EmploymentHistoryComponent,
     SocialMediaComponent,
     HomeComponent,
+    CodingComponent,
+    SocialComponent,
+    OtherSkillsComponent,
     
   ],
   imports: [
